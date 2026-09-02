@@ -4,7 +4,8 @@ export function normalizeText(value) {
   return String(value ?? '')
     .normalize('NFKD')
     .replace(/\p{M}/gu, '')
-    .replace(/[æä]/gi, 'A')
+    .replace(/æ/gi, 'AE')
+    .replace(/ä/gi, 'A')
     .replace(/[øö]/gi, 'O')
     .replace(/[å]/gi, 'A')
     .toUpperCase();
