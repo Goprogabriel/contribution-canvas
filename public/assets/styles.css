@@ -287,6 +287,10 @@ html[data-theme="light"] .theme-sun { display: block; }
 .onboarding-heading { max-width: 760px; margin-bottom: 34px; }
 .onboarding-heading h2 { max-width: 680px; margin: 10px 0 14px; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: -.04em; }
 .onboarding-heading p { margin: 0; color: var(--text-soft); font-size: 16px; line-height: 1.7; }
+.beginner-callout { display: flex; align-items: flex-start; gap: 12px; max-width: 920px; margin: 0 0 24px; padding: 14px 16px; border: 1px solid color-mix(in srgb, var(--info) 30%, var(--border)); border-radius: 12px; background: color-mix(in srgb, var(--info) 8%, var(--surface)); }
+.beginner-callout-icon { width: 27px; height: 27px; flex: 0 0 27px; display: grid; place-items: center; border-radius: 8px; background: color-mix(in srgb, var(--info) 22%, transparent); color: var(--info); font-weight: 800; }
+.beginner-callout strong { font-size: 12px; }
+.beginner-callout p { margin: 2px 0 0; color: var(--text-soft); font-size: 12px; line-height: 1.6; }
 .onboarding-paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .onboarding-path { position: relative; padding: 25px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); box-shadow: var(--shadow-sm); }
 .onboarding-path-featured { border-color: color-mix(in srgb, var(--accent) 42%, var(--border)); background: linear-gradient(145deg, var(--accent-soft), var(--surface) 48%); box-shadow: 0 0 0 1px var(--accent-soft), var(--shadow-md); }

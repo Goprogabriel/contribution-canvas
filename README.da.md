@@ -2,6 +2,12 @@
 
 Contribution Canvas er et open-source og local-first værktøj til at tegne **gennemsigtig contribution graph art**. Den offentlige GitHub Pages-side kan bruges til at tegne, placere pixeltekst samt importere og eksportere planer. Den kan ikke læse repositories eller pushe.
 
+## Prøv det live
+
+👉 [Åbn Contribution Canvas live](https://goprogabriel.github.io/contribution-canvas/)
+
+Du kan tegne og teste editoren direkte i browseren uden at downloade noget. Download kun projektet, hvis du vil forbinde din GitHub-konto og pushe graph-art til et repository.
+
 GitHub-delen bliver først låst op, når projektet køres lokalt:
 
 ```bash

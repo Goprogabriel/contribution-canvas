@@ -18,6 +18,11 @@
 
 <p align="center"><a href="README.da.md">Læs introduktionen på dansk</a></p>
 
+<p align="center">
+  <a href="https://goprogabriel.github.io/contribution-canvas/"><strong>🚀 Try Contribution Canvas live</strong></a><br />
+  Draw and test it in your browser — no download required.
+</p>
+
 > [!IMPORTANT]
 > Contribution Canvas creates **automatically generated graph art**, not ordinary software-development history. Generated repositories and commits explicitly say so. Do not present the output as genuine work activity.
 
@@ -47,6 +52,15 @@
 | GitHub token in browser code | Never | Never |
 
 The hosted site is intentionally a **safe design studio**. It does not contain OAuth, a client secret, a database or a push endpoint. Starting the local program unlocks GitHub controls in the exact same page.
+
+### New here? The short version
+
+1. Open the [live website](https://goprogabriel.github.io/contribution-canvas/) and draw your design.
+2. Click **Export** if you want to move the design to your computer.
+3. Download the project, install GitHub CLI and run `gh auth login` to connect your GitHub account.
+4. Run the local studio with `npm start`, choose an empty repository, review the preview and click **Generate & push once**.
+
+The live website is enough to try the editor. You only need the local version when you want Contribution Canvas to create commits in one of your GitHub repositories. GitHub may take up to 24 hours to show those commits on your profile.
 
 ## Start locally
 

@@ -106,34 +106,39 @@
           <p>There are two versions of Contribution Canvas. The hosted page is for designing. The downloaded local version is what safely creates and pushes commits to GitHub.</p>
         </div>
 
+        <div class="beginner-callout">
+          <span class="beginner-callout-icon">?</span>
+          <div><strong>New to GitHub?</strong><p>Your contribution graph is the row of green squares on your GitHub profile. Contribution Canvas helps you design those squares. The online page draws the plan; the local program is the part that can send it to GitHub.</p></div>
+        </div>
+
         <div class="onboarding-paths">
           <article class="onboarding-path">
             <div class="path-label"><span class="path-icon">01</span><span>Using the GitHub Pages website</span><span class="path-status">Design only</span></div>
-            <h3>Design and save your plan</h3>
+            <h3>Draw it in your browser</h3>
             <ol>
               <li>Open the canvas and draw your pattern or place pixel text.</li>
               <li>Use <strong>Export</strong> to download the plan as a JSON file.</li>
-              <li>To publish the plan to GitHub, continue with the local steps.</li>
+              <li>To put it on your profile, continue with the local steps.</li>
             </ol>
             <p class="path-note"><strong>Important:</strong> GitHub Pages cannot access your account and cannot push. This protects your token.</p>
           </article>
 
           <article class="onboarding-path onboarding-path-featured">
             <div class="path-label"><span class="path-icon">02</span><span>Using the downloaded program</span><span class="path-status active">Can push</span></div>
-            <h3>Push once and update your profile</h3>
+            <h3>Send it to GitHub safely</h3>
             <ol>
-              <li>Install <a href="https://cli.github.com/" target="_blank" rel="noreferrer">GitHub CLI</a>, then run <code>gh auth login</code>.</li>
-              <li>Clone the project and start the local studio:</li>
+              <li>Install <a href="https://cli.github.com/" target="_blank" rel="noreferrer">GitHub CLI</a>. Run <code>gh auth login</code> and follow the browser login.</li>
+              <li>Download the project and start the local studio:</li>
             </ol>
             <pre><code>git clone https://github.com/Goprogabriel/contribution-canvas.git
 cd contribution-canvas
 npm start</code></pre>
             <ol start="3">
-              <li>Import your JSON plan, choose a repository, run the safety check and load current activity.</li>
-              <li>Run the dry-run, type the exact commit total, then choose <strong>Generate &amp; push once</strong>.</li>
-              <li>Open your GitHub profile later. GitHub can take up to 24 hours to show the contribution graph.</li>
+              <li>Import your plan and choose an empty repository. A repository is simply a project folder on GitHub.</li>
+              <li>Click the safety check and dry-run. These only preview what will happen.</li>
+              <li>Type the shown number, click <strong>Generate &amp; push once</strong>, then check your profile later.</li>
             </ol>
-            <p class="path-note"><strong>Nothing is pushed before your confirmation.</strong> The program uses one normal push and never force-pushes.</p>
+            <p class="path-note"><strong>Nothing is pushed before your confirmation.</strong> GitHub can take up to 24 hours to show the green squares. The program uses one normal push and never force-pushes.</p>
           </article>
         </div>
       </section>
