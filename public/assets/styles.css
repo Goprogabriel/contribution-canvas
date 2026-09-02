@@ -239,6 +239,7 @@ html[data-theme="light"] .theme-sun { display: block; }
 .button-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
 .hero {
+  height: 680px;
   min-height: 680px;
   display: grid;
   grid-template-columns: minmax(0, 1.03fr) minmax(440px, .97fr);
@@ -600,7 +601,7 @@ body.local-mode #demo-lock { display: none; }
   .section-shell { width: min(100% - 30px, 760px); }
   .topbar { grid-template-columns: 1fr auto; }
   .topbar-center { display: none; }
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-block: 70px; }
+  .hero { grid-template-columns: 1fr; height: auto; min-height: auto; padding-block: 70px; }
   .hero-copy { max-width: 760px; }
   .hero-visual { min-height: 430px; }
   .trust-strip { grid-template-columns: repeat(2, 1fr); }
