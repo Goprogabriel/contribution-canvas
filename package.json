@@ -1,0 +1,49 @@
+{
+  "name": "contribution-canvas",
+  "version": "1.0.0",
+  "description": "A local-first studio for transparent GitHub contribution graph art.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "author": "Contribution Canvas contributors",
+  "homepage": "https://Goprogabriel.github.io/contribution-canvas/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Goprogabriel/contribution-canvas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Goprogabriel/contribution-canvas/issues"
+  },
+  "bin": {
+    "contribution-canvas": "./bin/contribution-canvas.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "public",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "start": "node ./bin/contribution-canvas.mjs studio",
+    "studio": "node ./bin/contribution-canvas.mjs studio",
+    "doctor": "node ./bin/contribution-canvas.mjs doctor",
+    "build": "node ./scripts/build.mjs",
+    "check": "node ./scripts/check.mjs",
+    "test": "node --test --test-reporter=spec",
+    "test:ci": "node --test",
+    "verify": "npm run check && npm test && npm run build",
+    "prepack": "npm run verify"
+  },
+  "keywords": [
+    "github",
+    "contribution-graph",
+    "graph-art",
+    "local-first",
+    "developer-tools",
+    "open-source"
+  ]
+}

@@ -1,0 +1,32 @@
+name: Release archive
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - name: Create npm-compatible archive
+        run: npm pack
+      - name: Create source archive
+        run: tar --exclude='.git' --exclude='dist' -czf contribution-canvas-source.tar.gz .
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            contribution-canvas-*.tgz
+            contribution-canvas-source.tar.gz

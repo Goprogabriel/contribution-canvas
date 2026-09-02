@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/Goprogabriel/contribution-canvas/security/advisories/new
+    about: Report vulnerabilities privately
+  - name: Usage discussion
+    url: https://github.com/Goprogabriel/contribution-canvas/discussions
+    about: Ask setup and usage questions

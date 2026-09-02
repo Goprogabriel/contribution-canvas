@@ -1,0 +1,10 @@
+{
+  "name": "Contribution Canvas",
+  "short_name": "Canvas",
+  "description": "Local-first GitHub contribution graph art studio",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090b10",
+  "theme_color": "#090b10",
+  "icons": []
+}

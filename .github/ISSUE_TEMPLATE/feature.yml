@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest a focused improvement
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Project constraints
+      options:
+        - label: This keeps GitHub credentials out of browser code.
+          required: true
+        - label: This does not require force-push.
+          required: true
+        - label: Generated activity remains transparently labelled as graph art.
+          required: true
