@@ -14,6 +14,7 @@
   </head>
   <body>
     <a class="skip-link" href="#editor">Skip to editor</a>
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
 
     <header class="topbar">
       <a class="brand" href="#top" aria-label="Contribution Canvas home">
@@ -57,7 +58,6 @@
     <main id="top">
       <section id="hero" class="hero section-shell">
         <div class="hero-copy">
-          <div class="eyebrow"><span>Open source</span><span>Zero production dependencies</span><span>MIT licensed</span></div>
           <h1>Turn a year into<br /><em>your canvas.</em></h1>
           <p>
             Draw with a brush, erase, place pixel-perfect text and preview existing activity. Export anywhere—or run locally to create transparent, correctly dated commits through your own GitHub CLI.
@@ -72,7 +72,6 @@
             <code id="install-command">git clone https://github.com/Goprogabriel/contribution-canvas.git && cd contribution-canvas && npm start</code>
             <button id="copy-install-inline" class="copy-button" type="button" aria-label="Copy installation command">Copy</button>
           </div>
-          <p class="hero-footnote">The hosted page never asks for a token and cannot push. Local mode uses <code>gh auth</code> without exposing credentials to browser code.</p>
         </div>
 
         <div class="hero-visual" aria-hidden="true">

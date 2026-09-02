@@ -34,6 +34,7 @@
   --radius-xl: 28px;
   --cell-size: 13px;
   --cell-gap: 4px;
+  --topbar-height: 68px;
   --font-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
@@ -114,6 +115,8 @@ code, pre, kbd { font-family: var(--font-mono); }
   transition: top 0.2s;
 }
 .skip-link:focus { top: 16px; }
+.scroll-progress { position: fixed; z-index: 110; top: var(--topbar-height); left: 0; right: 0; height: 3px; pointer-events: none; background: transparent; }
+.scroll-progress span { display: block; width: 100%; height: 100%; transform: scaleX(0); transform-origin: left center; background: linear-gradient(90deg, var(--accent-strong), var(--accent)); box-shadow: 0 0 14px var(--accent-glow); }
 
 .section-shell { width: min(1380px, calc(100% - 48px)); margin-inline: auto; }
 
@@ -621,6 +624,7 @@ body.local-mode #demo-lock { display: none; }
 }
 
 @media (max-width: 680px) {
+  :root { --topbar-height: 60px; }
   .topbar { height: 60px; padding: 0 12px; }
   .brand-copy small { display: none; }
   .topbar-actions { gap: 1px; }

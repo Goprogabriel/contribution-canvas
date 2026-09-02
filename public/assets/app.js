@@ -93,6 +93,14 @@ function formatReadableDate(value) {
   }).format(date);
 }
 
+function updateScrollProgress() {
+  const bar = $('#scroll-progress-bar');
+  if (!bar) return;
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight)) : 0;
+  bar.style.transform = `scaleX(${progress})`;
+}
+
 function toast(message, type = 'info') {
   const region = $('#toast-region');
   const node = document.createElement('div');
@@ -1220,6 +1228,9 @@ async function initialize() {
   updateStats();
   updateHistoryButtons();
   updateActionAvailability();
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  window.addEventListener('resize', updateScrollProgress);
+  updateScrollProgress();
   await initializeLocalMode();
 }
 
