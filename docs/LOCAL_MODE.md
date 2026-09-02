@@ -15,7 +15,7 @@ Contribution Canvas never asks for a personal access token. `gh auth login` stor
 
 ## Recommended workflow
 
-1. Draw or import a plan.
+1. Draw a plan on the hosted site, or draw/import one in local mode.
 2. Select a dedicated repository or create an empty one.
 3. Run repository preflight.
 4. Load current activity to spot collisions.
@@ -24,6 +24,8 @@ Contribution Canvas never asks for a personal access token. `gh auth login` stor
 7. Type the exact commit total.
 8. Generate and push once.
 9. Recheck the profile later if GitHub has not processed it yet.
+
+The hosted GitHub Pages version is intentionally design-only. It cannot access GitHub or push. The local version is the only version that can update a profile graph, and it keeps authentication inside GitHub CLI.
 
 ## Receipts
 

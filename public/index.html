@@ -9,7 +9,7 @@
     <title>Contribution Canvas — local-first graph art studio</title>
     <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/styles.css?v=2" />
     <script type="module" src="./assets/app.js"></script>
   </head>
   <body>
@@ -64,6 +64,7 @@
           </p>
           <div class="hero-actions">
             <a class="button button-primary button-large" href="#editor">Open the canvas</a>
+            <a class="button button-secondary button-large" href="#how-to-update">How to update your profile</a>
             <button id="copy-install-hero" class="button button-secondary button-large" type="button">Copy install command</button>
           </div>
           <div class="terminal-command" role="group" aria-label="Local installation command">
@@ -96,6 +97,45 @@
         <div><strong>Honest commits</strong><span>Every generated commit is marked as graph art</span></div>
         <div><strong>Safe by default</strong><span>No force-push, remote race checks, dry-run first</span></div>
         <div><strong>Free hosting</strong><span>Publish the public studio with GitHub Pages</span></div>
+      </section>
+
+      <section id="how-to-update" class="onboarding-section section-shell">
+        <div class="onboarding-heading">
+          <span class="section-kicker">Start here</span>
+          <h2>How do I update my GitHub contribution graph?</h2>
+          <p>There are two versions of Contribution Canvas. The hosted page is for designing. The downloaded local version is what safely creates and pushes commits to GitHub.</p>
+        </div>
+
+        <div class="onboarding-paths">
+          <article class="onboarding-path">
+            <div class="path-label"><span class="path-icon">01</span><span>Using the GitHub Pages website</span><span class="path-status">Design only</span></div>
+            <h3>Design and save your plan</h3>
+            <ol>
+              <li>Open the canvas and draw your pattern or place pixel text.</li>
+              <li>Use <strong>Export</strong> to download the plan as a JSON file.</li>
+              <li>To publish the plan to GitHub, continue with the local steps.</li>
+            </ol>
+            <p class="path-note"><strong>Important:</strong> GitHub Pages cannot access your account and cannot push. This protects your token.</p>
+          </article>
+
+          <article class="onboarding-path onboarding-path-featured">
+            <div class="path-label"><span class="path-icon">02</span><span>Using the downloaded program</span><span class="path-status active">Can push</span></div>
+            <h3>Push once and update your profile</h3>
+            <ol>
+              <li>Install <a href="https://cli.github.com/" target="_blank" rel="noreferrer">GitHub CLI</a>, then run <code>gh auth login</code>.</li>
+              <li>Clone the project and start the local studio:</li>
+            </ol>
+            <pre><code>git clone https://github.com/Goprogabriel/contribution-canvas.git
+cd contribution-canvas
+npm start</code></pre>
+            <ol start="3">
+              <li>Import your JSON plan, choose a repository, run the safety check and load current activity.</li>
+              <li>Run the dry-run, type the exact commit total, then choose <strong>Generate &amp; push once</strong>.</li>
+              <li>Open your GitHub profile later. GitHub can take up to 24 hours to show the contribution graph.</li>
+            </ol>
+            <p class="path-note"><strong>Nothing is pushed before your confirmation.</strong> The program uses one normal push and never force-pushes.</p>
+          </article>
+        </div>
       </section>
 
       <section id="editor" class="studio-section">
@@ -242,13 +282,13 @@
         <div class="workflow-intro">
           <span class="section-kicker">Local GitHub workflow</span>
           <h2>Preview publicly.<br />Push privately.</h2>
-          <p>The browser handles pixels. Your local Node process handles Git and delegates account access to the official GitHub CLI. No OAuth server, hosted database or pasted token is needed.</p>
+          <p>Use the hosted site to design. When you are ready to update your GitHub contribution graph, run the project locally. Only the local Node process can use Git, through the official GitHub CLI.</p>
         </div>
 
         <div class="workflow-card">
           <div id="demo-lock" class="demo-lock">
             <div class="lock-art"><span></span></div>
-            <div><strong>GitHub controls are locked in the hosted demo</strong><p>Clone the project and run <code>npm start</code>. The same page reopens in secure local mode.</p></div>
+            <div><strong>This hosted page is design-only</strong><p>To push to GitHub, clone the project, run <code>gh auth login</code>, then run <code>npm start</code>. The same page reopens with secure local controls.</p></div>
             <button id="copy-install-lock" class="button button-primary" type="button">Copy local command</button>
           </div>
 
@@ -310,15 +350,15 @@
       </section>
 
       <section class="how-section section-shell">
-        <div class="how-heading"><span class="section-kicker">From clone to canvas</span><h2>Three commands. No cloud backend.</h2></div>
+          <div class="how-heading"><span class="section-kicker">Quick reference</span><h2>From design to profile graph</h2></div>
         <div class="how-grid">
           <article><span class="how-number">01</span><h3>Clone & authenticate</h3><pre><code>git clone …
 cd contribution-canvas
 gh auth login</code></pre></article>
           <article><span class="how-number">02</span><h3>Open the local studio</h3><pre><code>npm start
 # Opens 127.0.0.1 only</code></pre></article>
-          <article><span class="how-number">03</span><h3>Dry-run before push</h3><pre><code>Draw → Preflight → Dry-run
-Type the exact total → Push</code></pre></article>
+          <article><span class="how-number">03</span><h3>Review and push once</h3><pre><code>Import → Preflight → Dry-run
+Type the exact total → Push once</code></pre></article>
         </div>
       </section>
 
