@@ -348,7 +348,7 @@ html[data-theme="light"] .theme-sun { display: block; }
 .studio-heading h2, .workflow-intro h2, .how-heading h2, .principles-card h2 { margin: 10px 0 0; font-size: clamp(30px, 4vw, 50px); line-height: 1.03; letter-spacing: -.045em; }
 .heading-actions { display: flex; gap: 8px; }
 .studio-shell {
-  width: min(1540px, calc(100% - 24px));
+  width: min(1380px, calc(100% - 48px));
   min-height: 680px;
   margin-inline: auto;
   display: grid;
@@ -607,7 +607,7 @@ body.local-mode #demo-lock { display: none; }
   .trust-strip { grid-template-columns: repeat(2, 1fr); }
   .trust-strip > div:nth-child(2) { border-right: 0; }
   .trust-strip > div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
-  .studio-shell { width: calc(100% - 16px); grid-template-columns: 68px minmax(650px, 1fr); overflow-x: auto; }
+  .studio-shell { width: calc(100% - 30px); grid-template-columns: 68px minmax(650px, 1fr); overflow-x: auto; }
   .inspector { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; border-top: 1px solid var(--border); border-left: 0; }
   .inspector-header, .inspector-divider { grid-column: 1 / -1; }
   .inspector-panel.active { align-self: start; }
@@ -647,7 +647,7 @@ body.local-mode #demo-lock { display: none; }
   .studio-heading { align-items: flex-start; flex-direction: column; }
   .heading-actions { width: 100%; }
   .heading-actions .button { flex: 1; }
-  .studio-shell { display: block; width: calc(100% - 12px); overflow: hidden; }
+  .studio-shell { display: block; width: calc(100% - 30px); overflow: hidden; }
   .tool-rail { position: sticky; z-index: 20; top: 60px; flex-direction: row; padding: 6px; border-right: 0; border-bottom: 1px solid var(--border); }
   .tool-button { flex: 1; min-height: 47px; }
   .tool-button svg { width: 17px; height: 17px; }
