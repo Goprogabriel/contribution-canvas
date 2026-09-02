@@ -351,7 +351,8 @@ function setTool(tool) {
   });
   $$('.inspector-panel').forEach((panel) => panel.classList.remove('active'));
   $(`#${tool}-panel`).classList.add('active');
-  $('#inspector-title').textContent = tool[0].toUpperCase() + tool.slice(1);
+  const toolLabels = { brush: 'Draw', eraser: 'Erase', text: 'Text' };
+  $('#inspector-title').textContent = toolLabels[tool];
   $('#tool-summary').textContent = tool === 'eraser' ? 'Planned layer' : `Strength ${tool === 'text' ? $('#text-strength').value : state.strength}`;
   if (tool === 'text') updateTextPreview();
   else {
@@ -731,7 +732,7 @@ async function copyInstallCommand() {
   const command = $('#install-command').textContent;
   try {
     await navigator.clipboard.writeText(command);
-    toast('Install command copied.', 'success');
+    toast('Setup command copied.', 'success');
   } catch {
     const range = document.createRange();
     range.selectNodeContents($('#install-command'));
@@ -800,7 +801,7 @@ async function initializeLocalMode() {
     document.body.classList.add('local-mode');
     $('#mode-pill').classList.remove('demo');
     $('#mode-pill').classList.add('local');
-    $('#mode-label').textContent = 'Secure local mode';
+    $('#mode-label').textContent = 'Local publish mode';
     $('#demo-lock').hidden = true;
     $('#local-controls').hidden = false;
     await Promise.allSettled([loadUser(), loadRepositories()]);
